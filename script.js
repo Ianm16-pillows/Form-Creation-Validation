@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Feedback Div Selection
     const feedbackDiv = document.getElementById('form-feedback');
 
-    // Function for handling form submission
-    function validateForm(event) {
+    // Function to handle form submission
+    function handleSubmit(event) {
         event.preventDefault();
 
         // Retrieve User Inputs
@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const email = document.getElementById('email').value.trim();
         const password = document.getElementById('password').value.trim();
 
+        // Initialize validation variables
         let isValid = true;
         const messages = [];
 
@@ -46,6 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Add event listener to form
-    form.addEventListener('submit', validateForm);
+    // Add event listener to the form
+    form.addEventListener('submit', handleSubmit);
 });
