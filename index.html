@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>User Registration Form</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <form id="registration-form">
-    <label for="username">Username:</label>
-    <input type="text" id="username" required>
+    <main>
+        <h1>User Registration</h1>
+        <form id="registration-form">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter username" required>
+            </div>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" required>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter email" required>
+            </div>
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" required>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter password" required>
+            </div>
 
-    <button type="submit">Register</button>
-    <div id="form-feedback"></div>
-  </form>
+            <button type="submit">Register</button>
+        </form>
 
-  <script src="script.js"></script>
+        <!-- Feedback Div -->
+        <div id="form-feedback"></div>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
