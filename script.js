@@ -1,12 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
     // ✅ Form Selection
     const form = document.getElementById('registration-form');
 
     // ✅ Feedback Div Selection
     const feedbackDiv = document.getElementById('form-feedback');
 
-    // ✅ Form Submission Event
-    form.addEventListener('submit', (event) => {
+    // ✅ Define validation function (so "function" exists)
+    function handleFormSubmission(event) {
         event.preventDefault();
 
         // ✅ Retrieve User Inputs
@@ -45,5 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
             feedbackDiv.innerHTML = messages.join('<br>');
             feedbackDiv.style.color = '#dc3545';
         }
-    });
+    }
+
+    // ✅ Add event listener with the function
+    form.addEventListener('submit', handleFormSubmission);
 });
+
